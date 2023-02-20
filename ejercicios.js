@@ -48,8 +48,30 @@ const arreglo = ['False','True'];
 const arr =[];
 arr.length
 if (arr.length === 0) {
-    console.log ("Vacio");
+    console.log ("Vacio")
 }
+
+ const trueFalse = ['False','True', 'False', 'True'];
+console.log(true[0]); 
+///////////////////////////////////////
+
+
+let fibonacci = function(){
+
+ let memoizacion = [0, 1];
+ let fib = function (n){
+    let resultado = memoizacion[n];
+    if(typeof resultado != 'number'){
+
+        resultado = fib (n - 1) + fib (n - 2);
+        memoizacion[n] = resultado;
+    }
+    return resultado;
+ }
+ return fib;
+}
+console.log(fibonacci(10));
+
 
 
 
